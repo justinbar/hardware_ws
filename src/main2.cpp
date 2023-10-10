@@ -79,18 +79,18 @@ void subscription_callback(const void *msgin)
   if (angular_z > 0)
   {
     // Move left
-    digitalWrite(MOTOR_1_PIN_1, HIGH);
-    digitalWrite(MOTOR_1_PIN_2, LOW);
-    digitalWrite(MOTOR_2_PIN_1, LOW);
-    digitalWrite(MOTOR_2_PIN_2, HIGH);
-  }
-  else if (angular_z < 0)
-  {
-    // Move right
     digitalWrite(MOTOR_1_PIN_1, LOW);
     digitalWrite(MOTOR_1_PIN_2, HIGH);
     digitalWrite(MOTOR_2_PIN_1, HIGH);
     digitalWrite(MOTOR_2_PIN_2, LOW);
+  }
+  else if (angular_z < 0)
+  {
+    // Move right
+    digitalWrite(MOTOR_1_PIN_1, HIGH);
+    digitalWrite(MOTOR_1_PIN_2, LOW);
+    digitalWrite(MOTOR_2_PIN_1, LOW);
+    digitalWrite(MOTOR_2_PIN_2, HIGH);
   }
   else if (linear_x == 0 && angular_z == 0)
   {
